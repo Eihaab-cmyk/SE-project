@@ -8,7 +8,7 @@ const DBLeftSection = () => {
     <div className='h-full py-12 flex flex-col bg-lightOverlay backdrop-blur-md shadow-md min-w-210 w-300 gap-3'>
         <NavLink to={"/"} className="flex items-center justify-start px-6 gap-4">
         <img src={Lo} className='w-12 rounded-full shadow-lg' alt="" />
-        <p className=' text-teal-50 font-semibold text-xl'>Foodora</p>
+        <p className=' text-teal-50 font-semibold text-xl'>Fudora</p>
        </NavLink>
 
        <hr />
@@ -19,7 +19,6 @@ const DBLeftSection = () => {
             <NavLink className={({isActive}) => isActive ? `${isActiveStyles} px-4 py-2 border-l-8` : isNotActiveStyles} to={"/dashboard/items"} >Items</NavLink>
             <NavLink className={({isActive}) => isActive ? `${isActiveStyles} px-4 py-2 border-l-8` : isNotActiveStyles} to={"/dashboard/newItem"} >Add New Item</NavLink>
             <NavLink className={({isActive}) => isActive ? `${isActiveStyles} px-4 py-2 border-l-8` : isNotActiveStyles} to={"/dashboard/users"} >Users</NavLink>
-
        </ul>
 
        <div className='w-full items-center justify-center flex h-225 mt-auto px-2'>

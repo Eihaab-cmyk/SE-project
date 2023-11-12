@@ -1,15 +1,24 @@
-export const buttonClick = {
-    whileTap: {scale: 0.95},
-};
+export {default as LoginInput} from "./LoginInput";
+export {default as MainLoader} from "./MainLoader";
+export {default as Alert} from "./Alert";
+export {default as Header} from "./Header";
 
-export const fadeInOut = {
-    initial:{opacity: 0},
-    animate:{opacity: 1},
-    exit:{opacity: 0},
-};
+export {default as DBLeftSection} from "./DBLeftSection";
+export {default as DBRightSection} from "./DBRightSection";
+export {default as DBHeader} from "./DBHeader";
 
-export const slideTop = {
-    initial:{opacity : 0, y : 30},
-    animate:{opacity : 1, y : 0},
-    exit:{opacity : 0, y : 30},
-}
+export {default as DBHome} from "./DBHome";
+export {default as DBOrders} from "./DBOrders";
+export {default as DBItems} from "./DBItems";
+export {default as DBNewItem} from "./DBNewItem";
+export {default as DBUsers} from "./DBUsers";
+
+export {default as DataTable} from "./DataTable";
+
+export {default as Spinner} from "./Spinner";
+export {default as Home} from "./Home";
+export {default as HomeSlider} from "./HomeSlider";
+export {default as Slider} from "./Slider";
+export {default as SliderCard} from "./SliderCard";
+export {default as FilterSection} from "./FilterSection";
+export {default as Cart} from "./Cart";

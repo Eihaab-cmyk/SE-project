@@ -25,7 +25,7 @@ const DBHeader = () => {
   return (
     <div className='w-full flex items-center justify-between gap-3'>
         <p className='text-2xl text-teal-50'>
-            Welcome to Foodora
+            Welcome to Fudora
             {user?.name && <span className='block text-gray-400'>{`Hello ${user?.name}`}</span>}
         </p>
 

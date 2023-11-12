@@ -9,10 +9,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAuth } from 'firebase/auth';
 import { app } from '../config/firebase.config';
 import { setUserNull } from '../context/actions/userActions';
+import {setCartOn} from '../context/actions/displayCartAction'
 
 const Header = () => {
 
     const user = useSelector((state) => state.user);
+    const cart = useSelector((state) => state.cart);
+
     const [isMenu, setisMenu] = useState(false);
     const firebaseAuth = getAuth(app);
     const navigate = useNavigate()
@@ -29,7 +32,7 @@ const Header = () => {
     <header className='fixed backdrop-blur-md z-50 inset-x-0 top-0 flex items-center bg-gray-700 justify-between px-12 md:px-20 py-6'>
        <NavLink to={"/"} className="flex items-center justify-center gap-4">
         <img src={Lo} className='w-12 rounded-full shadow-lg' alt="" />
-        <p className=' text-teal-50 font-semibold text-xl'>Foodora</p>
+        <p className=' text-teal-50 font-semibold text-xl'>Fudora</p>
        </NavLink>
 
        <nav className='flex items-center justify-center gap-8'>
@@ -41,11 +44,13 @@ const Header = () => {
 
         </ul>
 
-        <motion.div {...buttonClick} className='relative cursor-pointer'>
+        <motion.div {...buttonClick} onClick={() => dispatch(setCartOn())} className='relative cursor-pointer'>
             <MdShoppingCart className='text-3xl text-teal-50' />
-            <div className='w-6 h-6 rounded-full bg-red-500 items-center justify-center absolute -top-4 -right-2'>
-                <p className='text-primary text-base font-semibold items-center justify-center absolute right-2'>2</p>
-            </div>
+            {cart?.length > 0 && (
+                            <div className='w-6 h-6 rounded-full bg-red-500 items-center justify-center absolute -top-4 -right-2'>
+                            <p className='text-primary text-base font-semibold items-center justify-center absolute right-2'>{cart?.length}</p>
+                        </div>
+            )}
         </motion.div>
 
         {user ?
