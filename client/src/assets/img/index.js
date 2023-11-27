@@ -1,0 +1,9 @@
+export {default as LoginBg} from "./Login1.jpg";
+export {default as Login2} from "./Login2.jpg";
+export {default as Avatar} from "./avatar.png";
+export {default as Delivery} from "./delivery.png";
+export {default as HeroBg} from "./heroBg.png";
+export {default as Logo} from "./logo.png";
+export {default as Login4} from "./login4.jpg";
+export {default as Lo} from "./Lo.png";
+export {default as L5} from "./L5.jpg";
